@@ -829,6 +829,18 @@ impl web_transport_trait::Stats for SessionStats {
             None
         }
     }
+
+    fn ecn_ect0(&self) -> Option<u64> {
+        Some(self.stats.path.ecn_feedback.ect0)
+    }
+
+    fn ecn_ect1(&self) -> Option<u64> {
+        Some(self.stats.path.ecn_feedback.ect1)
+    }
+
+    fn ecn_ce(&self) -> Option<u64> {
+        Some(self.stats.path.ecn_feedback.ce)
+    }
 }
 
 impl web_transport_trait::Session for Session {
