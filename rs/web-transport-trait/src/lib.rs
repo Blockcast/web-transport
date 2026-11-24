@@ -81,6 +81,21 @@ pub trait Stats {
     fn estimated_send_rate(&self) -> Option<u64> {
         None
     }
+
+    /// Total ECT(0) codepoints reported by the peer in QUIC ACK_ECN frames.
+    fn ecn_ect0(&self) -> Option<u64> {
+        None
+    }
+
+    /// Total ECT(1) codepoints reported by the peer in QUIC ACK_ECN frames.
+    fn ecn_ect1(&self) -> Option<u64> {
+        None
+    }
+
+    /// Total CE codepoints reported by the peer in QUIC ACK_ECN frames.
+    fn ecn_ce(&self) -> Option<u64> {
+        None
+    }
 }
 
 /// Default stats implementation that returns `None` for all metrics.

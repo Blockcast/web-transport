@@ -14,6 +14,10 @@ members = [
 ]
 resolver = "2"
 
+[patch.crates-io]
+quinn = { git = "https://github.com/Blockcast/quinn.git", rev = "7d9a77cb8d21251ed1f04677c8e3fe0a8b85f992" }
+quinn-proto = { git = "https://github.com/Blockcast/quinn.git", rev = "7d9a77cb8d21251ed1f04677c8e3fe0a8b85f992" }
+
 [workspace.dependencies]
 web-transport-proto = { path = "rs/web-transport-proto", version = "0.7" }
 web-transport-quinn = { path = "rs/web-transport-quinn", version = "0.14", default-features = false }
